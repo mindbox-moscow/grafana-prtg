@@ -353,7 +353,8 @@ function PRTGAPIService(alertSrv, backendSrv) {
         return this.getGroups(groupFilter).then(filteredGroups => {
           const filters = [];
           _.each(filteredGroups, group => {
-            filters.push("filter_group=" + group.group);
+            //filters.push("filter_group=" + group.group);
+            filters.push("id=" + group.objid);
           });
 
           return this.performDeviceSuggestQuery(
