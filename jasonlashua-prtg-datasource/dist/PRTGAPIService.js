@@ -265,8 +265,8 @@ System.register(["angular", "lodash", "./utils"], function (_export, _context) {
             return this.getGroups(groupFilter).then(function (filteredGroups) {
               var filters = [];
               _.each(filteredGroups, function (group) {
-            //filters.push("filter_group=" + group.group);
-            filters.push("id=" + group.objid); 
+                //filters.push("filter_group=" + group.group);
+                filters.push("id=" + group.objid);
               });
 
               return _this3.performDeviceSuggestQuery("&" + filters.join("&")).then(function (devices) {

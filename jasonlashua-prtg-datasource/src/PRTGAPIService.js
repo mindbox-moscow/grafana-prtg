@@ -315,6 +315,7 @@ function PRTGAPIService(alertSrv, backendSrv) {
           _.each(filteredGroups, group => {
             //filters.push("filter_group=" + group.group);
             filters.push("id=" + group.objid);
+
           });
 
           return this.performDeviceSuggestQuery(

@@ -200,7 +200,7 @@ export class PRTGQueryController extends QueryCtrl {
    * Retrieve sensors and populate list
    */
   updateSensorList() {
-    const groupFilter = this.templateSrv.replace(this.target.group.name);
+    const groupFilter = this.templateSrv.replace(this.target.group);
     const deviceFilter = this.templateSrv.replace(this.target.device.name);
     this.metric.sensorList = [{name: '*', visible_name: 'All'}];
     this.addTemplatedVariables(this.metric.sensorList);
